@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MauiApp1MinhasCompras.Models;
+﻿using MauiApp1MinhasCompras.Models;
 using SQLite;
 
 namespace MauiApp1MinhasCompras.Helpers
