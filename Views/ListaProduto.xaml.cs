@@ -11,8 +11,8 @@ public partial class ListaProduto : ContentPage
 	{
 		try
 		{
-			Navigation.PushAsync(new Views.NovoProduto());
-		}
+			Navigation.PushAsync(new Views.NovoProduto());// faz a navegação para página
+		} 
 		catch (Exception ex)
 		{
 			DisplayAlert("Ops", ex.Message, "Ok");

@@ -13,7 +13,7 @@ public partial class NovoProduto : ContentPage
     {
         try
         {
-            Produto p = new Produto
+            Produto p = new Produto //cria uma nova instância da classe Produto, reserva espaço na memória para um novo objeto do tipo Produto e pode definir os valores de suas propriedades.
             {
                 Descricao = txt_descricao.Text,
                 Quantidade = Convert.ToDouble(txt_quantidade.Text),
@@ -31,6 +31,6 @@ public partial class NovoProduto : ContentPage
 
     private  async void Voltar_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PopAsync();
+        await Navigation.PopAsync(); //Esse comando faz com que a página atual seja removida da pilha de navegação, retornando para a página anterior.
     }
 }

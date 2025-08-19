@@ -11,7 +11,10 @@ namespace MauiApp1MinhasCompras
             {
                 if (_db == null) // verifica se a instância do banco de dados já foi criada
                 {
-                    string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "banco_sqlite_compras.db3"); // Define o caminho do arquivo do banco de dados
+                    string path = Path.Combine(Environment.GetFolderPath // gera o caminho do arquivo do banco de dados, combinando diferentes partes do caminho
+                        (Environment.SpecialFolder.LocalApplicationData), // retorna o caminho para a pasta de dados locais da aplicação
+                        "banco_sqlite_compras.db3"); //nome do arquivo do banco de dados SQLite,o arquivo será criado ou aberto nesse local.
+
                     _db = new SQLiteDatabaseHelper(path); // Inicializa a instância do banco de dados se ainda não estiver criada
                 }
                 return _db;
