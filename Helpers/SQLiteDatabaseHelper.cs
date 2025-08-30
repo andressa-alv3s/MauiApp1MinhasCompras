@@ -27,7 +27,7 @@ namespace MauiApp1MinhasCompras.Helpers
             return _conn.Table<Produto>().ToListAsync(); //instrução para buscar todos os produtos na tabela Produto
         }
         public Task<List<Produto>> Search(string q) { //método para buscar produtos no banco de dados
-            string sql = "SELECT * Produto WHERE descricao LIKE '%" + q + "%'";//declaração da instrução SQL para buscar produtos
+            string sql = "SELECT * FROM Produto WHERE descricao LIKE '%" + q + "%'";//declaração da instrução SQL para buscar produtos
             return _conn.QueryAsync<Produto>(sql);
         }
     }
