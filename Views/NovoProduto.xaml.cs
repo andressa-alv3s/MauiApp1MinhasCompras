@@ -21,16 +21,12 @@ public partial class NovoProduto : ContentPage
             };
             await App.Db.Insert(p);
             await DisplayAlert("Sucesso", "Produto adicionado com sucesso!", "Ok");
+            await Navigation.PopAsync();
         }
         catch (Exception ex)
         {
             _ = DisplayAlert("Ops", ex.Message, "Ok");
 
         }
-    }
-
-    private  async void Voltar_Clicked(object sender, EventArgs e)
-    {
-        await Navigation.PopAsync(); //Esse comando faz com que a página atual seja removida da pilha de navegação, retornando para a página anterior.
     }
 }
